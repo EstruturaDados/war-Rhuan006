@@ -23,18 +23,21 @@ typedef struct {
     char nome[Max_Nome];
     char cor[Max_Cor];
     int tropas;
-}
+} Territorio;
+
 // --- Protótipos das Funções ---
-// Declarações antecipadas de todas as funções que serão usadas no programa, organizadas por categoria.
-// Funções de setup e gerenciamento de memória:
-// Funções de interface com o usuário:
-// Funções de lógica principal do jogo:
-// Função utilitária:
+void cadastrarTerritorios(Territorio territorios[], int tamanho);
+void exibirTerritorios(const Territorio territorios[], int tamanho);
 
 // --- Função Principal (main) ---
 // Função principal que orquestra o fluxo do jogo, chamando as outras funções em ordem.
 int main() {
+    Territorio territorios[Max_Territorios];
+    printf("==============================================\n");
+    printf("      WAR ESTRUTURADO - CADASTRO INICIAL      \n");
+    printf("==============================================\n\n");
     // 1. Configuração Inicial (Setup):
+
         // - Define o locale para português.
             // - Inicializa a semente para geração de números aleatórios com base no tempo atual.
                 // - Aloca a memória para o mapa do mundo e verifica se a alocação foi bem-sucedida.
@@ -97,4 +100,4 @@ int main() {
                                                                     // Retorna 1 (verdadeiro) se a missão foi cumprida, e 0 (falso) caso contrário.
 
                                                                     // limparBufferEntrada():
-                                                                    // Função utilitária para limpar o buffer de entrada do teclado (stdin), evitando problemas com leituras consecutivas de scanf e getchar.
+                                                                                                          // Função utilitária para limpar o buffer de entrada do teclado (stdin), evitando problemas com leituras consecutivas de scanf e getchar.
